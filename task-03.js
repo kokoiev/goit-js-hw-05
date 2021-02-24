@@ -5,8 +5,10 @@ class Storage {
     getItems = function () {
         return this.items
     }
-    addItem = function (newItem) { 
-        this.items.push(newItem)
+    addItem = function (newItem) {
+        if (!this.items.includes(newItem)) {
+            this.items.push(newItem)
+        }
 
     }
     removeItem = function (killItem) { 
